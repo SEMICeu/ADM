@@ -276,7 +276,7 @@ This specification uses the following prefixes to shorten the URIs for readibili
 			      <a href="#ESF">ESF</a> |
 			      <a href="#Identifier">Identifier</a> |
 			      <a href="#KeyExpert">KeyExpert</a> |
-			      <a href="#MonetaryAmount">Monetary Amount</a> |
+			      <a href="#MonetaryValue">Monetary Value</a> |
 			      <a href="#Partner">Partner</a> |
 			      <a href="#Person">Person</a> |
                         </p>
@@ -285,7 +285,7 @@ This specification uses the following prefixes to shorten the URIs for readibili
                         <p>
                             And supported by these datatypes:
                             <br />
-                            | <a href="#Code">Code</a> | <a href="#Date">Date</a> | <a href="#Decimal">Decimal</a> | <a href="#Genericdate">Generic date</a> | <a href="#Integer">Integer</a> | <a href="#Literal">Literal</a> | <a href="#Text">Text</a> |
+                            | <a href="#Boolean">Boolean</a> | <a href="#Code">Code</a> | <a href="#Date">Date</a> | <a href="#Decimal">Decimal</a> | <a href="#Genericdate">Generic date</a> | <a href="#Integer">Integer</a> | <a href="#Literal">Literal</a> | <a href="#Text">Text</a> |
                         </p>
                 
     </div>
@@ -352,7 +352,11 @@ The main entities are those that form the core of the Application Profile.
                     
                         <dd>
                             For this entity the following properties are defined: <a href="#Contract.belongsto">belongs to</a>
+                            , <a href="#Contract.contracttype">contract type</a>
+                            , <a href="#Contract.hascontractconclusiondate">has contract conclusion date</a>
+                            , <a href="#Contract.hascontractor">has contractor</a>
                             , <a href="#Contract.hasKeyExpert">has KeyExpert</a>
+                            , <a href="#Contract.modified">modified</a>
                             .
                     </dd>
                 
@@ -435,6 +439,136 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
                             </tr>
                         
+                            <tr id="Contract.contracttype"
+                                typeof="rdf:Property"
+                                resource="https://w3id.org/adm/model/contractType"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20contract type%20in%20Contract&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23Contract.contracttype" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/adm/model/contractType"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/adm/model/contractType"
+                                           data-placement="right">
+                                        contract type</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Code" data-placement="right">Code</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    A classification of the contract.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    The recommended codelist is the <a href= "#list-contract-contractType" >Contract Type</a> list.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Contract.hascontractconclusiondate"
+                                typeof="rdf:Property"
+                                resource="http://data.europa.eu/a4g/ontology#hasContractConclusionDate"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20has contract conclusion date%20in%20Contract&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23Contract.hascontractconclusiondate" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/a4g/ontology#hasContractConclusionDate"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/a4g/ontology#hasContractConclusionDate"
+                                           data-placement="right">
+                                        has contract conclusion date</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Date" data-placement="right">Date</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The date the contract was signed by the last signatory party.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Contract.hascontractor"
+                                typeof="rdf:Property"
+                                resource="https://w3id.org/adm/model/hasContractor"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20has contractor%20in%20Contract&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23Contract.hascontractor" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/adm/model/hasContractor"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/adm/model/hasContractor"
+                                           data-placement="right">
+                                        has contractor</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#LegalEntity" data-placement="right">Legal Entity</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The reference to the entity which is the
+contractor of the contract.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
                             <tr id="Contract.hasKeyExpert"
                                 typeof="rdf:Property"
                                 resource="https://w3id.org/adm/model/hasKeyExpert"
@@ -464,6 +598,50 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
                                 <td property="rdfs:comment">
                                     Expert assigned on a contract
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Contract.modified"
+                                typeof="rdf:Property"
+                                resource="https://w3id.org/adm/model/modified"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20modified%20in%20Contract&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23Contract.modified" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/adm/model/modified"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/adm/model/modified"
+                                           data-placement="right">
+                                        modified</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Boolean" data-placement="right">Boolean</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Flag indicating if the contract is a modified (edited) version of a preexisting
+contract, or not.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -788,7 +966,7 @@ The details of the registration are provided as properties of the Identifier cla
                                 <td>
                                     
                                         
-                                            <a href="#MonetaryAmount" data-placement="right">Monetary Amount</a>
+                                            <a href="#MonetaryValue" data-placement="right">Monetary Value</a>
                                         
                                     
                                 </td>
@@ -1003,7 +1181,7 @@ The details of the registration are provided as properties of the Identifier cla
                                 <td>
                                     
                                         
-                                            <a href="#MonetaryAmount" data-placement="right">Monetary Amount</a>
+                                            <a href="#MonetaryValue" data-placement="right">Monetary Value</a>
                                         
                                     
                                 </td>
@@ -1089,7 +1267,7 @@ The details of the registration are provided as properties of the Identifier cla
                                 <td>
                                     
                                         
-                                            <a href="#MonetaryAmount" data-placement="right">Monetary Amount</a>
+                                            <a href="#MonetaryValue" data-placement="right">Monetary Value</a>
                                         
                                     
                                 </td>
@@ -1261,7 +1439,7 @@ The details of the registration are provided as properties of the Identifier cla
                                 <td>
                                     
                                         
-                                            <a href="#MonetaryAmount" data-placement="right">Monetary Amount</a>
+                                            <a href="#MonetaryValue" data-placement="right">Monetary Value</a>
                                         
                                     
                                 </td>
@@ -1315,7 +1493,8 @@ The details of the registration are provided as properties of the Identifier cla
                     Definition
                 </dt>
                 <dd>
-                    
+                    A contract which is part of some larger contract and only has full recognition within the context of that contract.
+ 
                 </dd>
                 
                 
@@ -1660,7 +1839,7 @@ approval of the application.
                                 <td>
                                     
                                         
-                                            <a href="#MonetaryAmount" data-placement="right">Monetary Amount</a>
+                                            <a href="#MonetaryValue" data-placement="right">Monetary Value</a>
                                         
                                     
                                 </td>
@@ -1840,7 +2019,7 @@ application.
                                     A category to which the project belongs to.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    The recommended control vocabulary is the <a href="#list-project-type" > Project Type </a> list. 
+                                    The recommended control vocabulary is the <a href="#list-block-projectType" > Project Type </a> list. 
                                 </td>
 				<!--
                                 <td>
@@ -2437,16 +2616,16 @@ application.
 
    
         <section>
-            <h3 id="MonetaryAmount">
-                <a href="https://w3id.org/adm/model/MonetaryAmount"
+            <h3 id="MonetaryValue">
+                <a href="http://data.europa.eu/a4g/ontology#MonetaryValue"
                    data-toggle="tooltip"
-                   data-content="https://w3id.org/adm/model/MonetaryAmount"
-                   data-placement="right">Monetary Amount</a>
+                   data-content="http://data.europa.eu/a4g/ontology#MonetaryValue"
+                   data-placement="right">Monetary Value</a>
 
             </h3>
 	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
 		<!-- outcomment github feedback possibility
-                <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20MonetaryAmount&body=Explain%20your%20issue"}}>
+                <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20MonetaryValue&body=Explain%20your%20issue"}}>
                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
 		</a>
 		-->
@@ -2455,7 +2634,7 @@ application.
                     Definition
                 </dt>
                 <dd>
-                    A sum of money.
+                    A number of monetary units specified using a given unit of currency.
                 </dd>
                 
                 
@@ -2465,8 +2644,8 @@ application.
                     </dt>
                     
                         <dd>
-                            For this entity the following properties are defined: <a href="#MonetaryAmount.currency">currency</a>
-                            , <a href="#MonetaryAmount.value">value</a>
+                            For this entity the following properties are defined: <a href="#MonetaryValue.hasamountvalue">has amount value</a>
+                            , <a href="#MonetaryValue.hascurrency">has currency</a>
                             .
                     </dd>
                 
@@ -2506,27 +2685,27 @@ application.
                     </thead>
                     <tbody class="supertype">
                         
-                            <tr id="MonetaryAmount.currency"
+                            <tr id="MonetaryValue.hasamountvalue"
                                 typeof="rdf:Property"
-                                resource="https://w3id.org/adm/model/currency"
+                                resource="http://data.europa.eu/a4g/ontology#hasAmountValue"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20currency%20in%20Monetary Amount&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23MonetaryAmount.currency" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20has amount value%20in%20Monetary Value&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23MonetaryValue.hasamountvalue" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
                                 <td>
-                                        <a href="https://w3id.org/adm/model/currency"
+                                        <a href="http://data.europa.eu/a4g/ontology#hasAmountValue"
                                            data-toggle="tooltip"
-                                           data-content="https://w3id.org/adm/model/currency"
+                                           data-content="http://data.europa.eu/a4g/ontology#hasAmountValue"
                                            data-placement="right">
-                                        currency</a>
+                                        has amount value</a>
                                 </td>
                                 <td>
                                     
                                         
-                                            <a href="#Code" data-placement="right">Code</a>
+                                            <a href="#Decimal" data-placement="right">Decimal</a>
                                         
                                     
                                 </td>
@@ -2534,7 +2713,7 @@ application.
                                     1
                                 </td>
                                 <td property="rdfs:comment">
-                                    The system of money used for the amount.
+                                    The numeric value of the amount, including decimals.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -2549,27 +2728,27 @@ application.
                                 </td>
                             </tr>
                         
-                            <tr id="MonetaryAmount.value"
+                            <tr id="MonetaryValue.hascurrency"
                                 typeof="rdf:Property"
-                                resource="https://w3id.org/adm/model/value"
+                                resource="http://data.europa.eu/a4g/ontology#hasCurrency"
                                 class="class mandatory">
                                 <td>
-				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20value%20in%20Monetary Amount&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23MonetaryAmount.value" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20has currency%20in%20Monetary Value&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23MonetaryValue.hascurrency" target="_blank" rel="noopener noreferrer" >
 					    <!--                                        <i class="icon">[o]</i> -->
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
                                 <td>
-                                        <a href="https://w3id.org/adm/model/value"
+                                        <a href="http://data.europa.eu/a4g/ontology#hasCurrency"
                                            data-toggle="tooltip"
-                                           data-content="https://w3id.org/adm/model/value"
+                                           data-content="http://data.europa.eu/a4g/ontology#hasCurrency"
                                            data-placement="right">
-                                        value</a>
+                                        has currency</a>
                                 </td>
                                 <td>
                                     
                                         
-                                            <a href="#Decimal" data-placement="right">Decimal</a>
+                                            <a href="#Code" data-placement="right">Code</a>
                                         
                                     
                                 </td>
@@ -2577,10 +2756,10 @@ application.
                                     1
                                 </td>
                                 <td property="rdfs:comment">
-                                    The number expressing the sum of money.
+                                    The identifier of the currency as in the standard code list used.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    
+                                    The recommended control vocabulary is the <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/currency" > Currency </a> list from Publications Office. 
                                 </td>
 				<!--
                                 <td>
@@ -2623,7 +2802,7 @@ application.
                     Definition
                 </dt>
                 <dd>
-                    Entity which is partner of the beneficiary of th
+                    Entity which is partner of the beneficiary of the project.
                 </dd>
                 
                 
@@ -2913,6 +3092,22 @@ application.
 	    <tbody class="supertype">
             
 		<tr><td>
+                   <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20Boolean&body=Explain%20your%20issue"}}>
+                     <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
+		   </a>
+		</td><td>
+                
+                    <div id="Boolean">
+                        <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                           data-toggle="tooltip"
+                           data-content="http://www.w3.org/2001/XMLSchema#boolean"
+                           data-placement="right">Boolean</a>
+                    </div>
+                
+		</td><td>
+                    Boolean has the &quot;value space&quot; required to support the mathematical concept of binary-valued logic: {true, false}.
+		</td></tr>
+		<tr><td>
                    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20Code&body=Explain%20your%20issue"}}>
                      <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
 		   </a>
@@ -3068,7 +3263,7 @@ application.
     
 
 
-<h3 id="list-project-type">Block - Project Type</h3> 
+<h3 id="list-block-projectType">Block - Project Type</h3> 
 <table id="table-block-projectType" class="simple">
 	 <thead><tr><th>URI</th><th>Identifier</th><th>Label</th><th>Description</th></tr></thead>
     <tbody>
@@ -3153,23 +3348,48 @@ application.
   </tbody>
 </table>
 
+<h3 id="list-contract-contractType">Contract - Contract Type</h3> 
+<table id="table-contract-contractType" class="simple">
+	 <thead><tr><th>URI</th><th>Identifier</th><th>Label</th><th>Description</th></tr></thead>
+    <tbody>
+        <tr id="table-contract-contractType-1">
+            <td>http://publications.europa.eu/resource/authority/contract-nature/works</td>
+            <td>1</td>
+            <td>Works</td>
+            <td>The outcome of building or civil engineering works taken as a whole that is sufficient of itself to fulfil an economic or technical function.</td>
+        </tr>
+        <tr id="table-contract-contractType-2">
+            <td>https://w3id.org/adm/codelist/contractType/2</td>
+            <td>2</td>
+            <td>Supervision</td>
+            <td>A contract that requires a supervision service to fulfil an economic or technical function.</td>
+        </tr>
+        <tr id="table-contract-contractType-9">
+            <td>https://w3id.org/adm/codelist/contractType/9</td>
+            <td>9</td>
+            <td>Others</td>
+            <td>A contract that requires other type of services to fulfil an economic or technical function.</td>
+        </tr>
+    </tbody>
+</table>
+
 <h3 id="list-project-status">Project - Status</h3> 
 <table id="table-project-Status" class="simple">
 	 <thead><tr><th>URI</th><th>Identifier</th><th>Label</th><th>Description</th></tr></thead>
     <tbody>
-        <tr>
+        <tr id="table-project-Status-1">
             <td>https://w3id.org/adm/codelist/projectStatus/1</td>
             <td>1</td>
             <td>Open</td>
             <td>The project is ongoing</td>
         </tr>
-        <tr>
+        <tr id="table-project-Status-2">
             <td>https://w3id.org/adm/codelist/projectStatus/2</td>
             <td>2</td>
             <td>Closed</td>
             <td>The project is concluded</td>
         </tr>
-        <tr>
+        <tr id="table-project-Status-3">
             <td>https://w3id.org/adm/codelist/projectStatus/3</td>
             <td>3</td>
             <td>Cancelled</td>
@@ -3506,6 +3726,22 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
+					
+						
+					
+						
+					
+						
 					
 						
 					
@@ -3527,8 +3763,48 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><a href="#Contract">Contract</a></td>
 								<td><div class="shorten">http://data.europa.eu/a4g/ontology#Contract</div></td>
 								<td></td>
+								<td><a href="#Contract.contracttype">contract type </a></td>
+								<td><div class="shorten">https://w3id.org/adm/model/contractType</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Contract">Contract</a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#Contract</div></td>
+								<td></td>
+								<td><a href="#Contract.hascontractconclusiondate">has contract conclusion date </a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#hasContractConclusionDate</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Contract">Contract</a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#Contract</div></td>
+								<td></td>
+								<td><a href="#Contract.hascontractor">has contractor </a></td>
+								<td><div class="shorten">https://w3id.org/adm/model/hasContractor</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Contract">Contract</a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#Contract</div></td>
+								<td></td>
 								<td><a href="#Contract.hasKeyExpert">has KeyExpert </a></td>
 								<td><div class="shorten">https://w3id.org/adm/model/hasKeyExpert</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Contract">Contract</a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#Contract</div></td>
+								<td></td>
+								<td><a href="#Contract.modified">modified </a></td>
+								<td><div class="shorten">https://w3id.org/adm/model/modified</div></td>
 							</tr>
 						
 					
@@ -3700,21 +3976,21 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 							<tr>
-								<td><a href="#MonetaryAmount">Monetary Amount</a></td>
-								<td><div class="shorten">https://w3id.org/adm/model/MonetaryAmount</div></td>
+								<td><a href="#MonetaryValue">Monetary Value</a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#MonetaryValue</div></td>
 								<td></td>
-								<td><a href="#MonetaryAmount.currency">currency </a></td>
-								<td><div class="shorten">https://w3id.org/adm/model/currency</div></td>
+								<td><a href="#MonetaryValue.hasamountvalue">has amount value </a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#hasAmountValue</div></td>
 							</tr>
 						
 					
 						
 							<tr>
-								<td><a href="#MonetaryAmount">Monetary Amount</a></td>
-								<td><div class="shorten">https://w3id.org/adm/model/MonetaryAmount</div></td>
+								<td><a href="#MonetaryValue">Monetary Value</a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#MonetaryValue</div></td>
 								<td></td>
-								<td><a href="#MonetaryAmount.value">value </a></td>
-								<td><div class="shorten">https://w3id.org/adm/model/value</div></td>
+								<td><a href="#MonetaryValue.hascurrency">has currency </a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#hasCurrency</div></td>
 							</tr>
 						
 					
