@@ -1,0 +1,5 @@
+<https://w3id.org/adm/model/totalCost> <http://www.w3.org/2000/01/rdf-schema#comment> "Total amount of the project as agreed on the project application."@en .
+<https://w3id.org/adm/model/totalCost> <http://www.w3.org/2000/01/rdf-schema#label> "total cost"@en .
+<https://w3id.org/adm/model/totalCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/adm/model/totalCost> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/adm/model/> .
+<https://w3id.org/adm/model/totalCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .

@@ -1,0 +1,11 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/adm/model/hasContractor> a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "has contractor"@en ;
+    rdfs:comment """The reference to the entity which is the\r
+contractor of the contract."""@en ;
+    rdfs:isDefinedBy <https://w3id.org/adm/model/> .
+
