@@ -5,9 +5,15 @@
     "Boolean": "http://www.w3.org/2001/XMLSchema#boolean",
     "Code": "http://www.w3.org/2004/02/skos/core#Concept",
     "Contract": "http://data.europa.eu/a4g/ontology#Contract",
+    "ContractAddenda": "https://w3id.org/adm/model/ContractAddenda",
     "Date": "http://www.w3.org/2001/XMLSchema#date",
+    "DateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
     "Decimal": "http://www.w3.org/2001/XMLSchema#decimal",
     "Document": "http://data.europa.eu/a4g/ontology#Document",
+    "Document.title": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
     "ECFinancialAssistance": {
       "@id": "https://w3id.org/adm/model/ECFinancialAssistance",
       "@type": "@id"
@@ -20,11 +26,22 @@
     "LegalEntity": "http://www.w3.org/ns/legal#LegalEntity",
     "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
     "MonetaryValue": "http://data.europa.eu/a4g/ontology#MonetaryValue",
+    "Notice": "http://data.europa.eu/a4g/ontology#Notice",
     "Partner": "https://w3id.org/adm/model/Partner",
     "Person": "http://www.w3.org/ns/person#Person",
+    "Procedure": "http://data.europa.eu/a4g/ontology#Procedure",
+    "ProcurementInfo": "https://w3id.org/adm/model/ProcurementInfo",
     "Project": "http://dbpedia.org/ontology/Project",
+    "Project.title": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
     "Subcontract": "https://w3id.org/adm/model/Subcontract",
     "Text": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+    "amount": {
+      "@id": "https://w3id.org/adm/model/amount",
+      "@type": "@id"
+    },
     "belongsTo": {
       "@id": "https://w3id.org/adm/model/belongsTo",
       "@type": "@id"
@@ -33,10 +50,18 @@
       "@id": "https://w3id.org/adm/model/contractType",
       "@type": "@id"
     },
+    "count": {
+      "@id": "https://w3id.org/adm/model/count",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
     "dateOfBirth": {
       "@container": "@set",
       "@id": "http://data.europa.eu/m8g/birthDate",
       "@type": "http://data.europa.eu/m8g/GenericDate"
+    },
+    "description": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "dg": {
       "@id": "https://w3id.org/adm/model/dg",
@@ -46,10 +71,18 @@
       "@id": "http://dbpedia.org/ontology/projectEndDate",
       "@type": "http://www.w3.org/2001/XMLSchema#date"
     },
+    "excludedTenders": {
+      "@id": "https://w3id.org/adm/model/excludedTenders",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
     "familyName": {
       "@container": "@set",
       "@id": "http://xmlns.com/foaf/0.1/familyName",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "finalEndDate": {
+      "@id": "https://w3id.org/adm/model/finalEndDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
     },
     "givenName": {
       "@container": "@set",
@@ -68,9 +101,17 @@
       "@id": "https://w3id.org/adm/model/hasBlock",
       "@type": "@id"
     },
+    "hasContractAddenda": {
+      "@id": "https://w3id.org/adm/model/hasContractAddenda",
+      "@type": "@id"
+    },
     "hasContractConclusionDate": {
       "@id": "http://data.europa.eu/a4g/ontology#hasContractConclusionDate",
       "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "hasContractValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasContractValue",
+      "@type": "@id"
     },
     "hasContractor": {
       "@id": "https://w3id.org/adm/model/hasContractor",
@@ -79,6 +120,10 @@
     "hasCurrency": {
       "@id": "http://data.europa.eu/a4g/ontology#hasCurrency",
       "@type": "@id"
+    },
+    "hasESenderDispatchDate": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasESenderDispatchDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     "hasKeyExpert": {
       "@container": "@set",
@@ -90,18 +135,30 @@
       "@id": "https://w3id.org/adm/model/hasPartner",
       "@type": "@id"
     },
+    "hasProcedureType": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasProcedureType",
+      "@type": "@id"
+    },
+    "hasProcurementInfo": {
+      "@container": "@set",
+      "@id": "https://w3id.org/adm/model/hasProcurementInfo",
+      "@type": "@id"
+    },
     "hasUltimateOwner": {
       "@id": "https://w3id.org/adm/model/hasUltimateOwner",
       "@type": "@id"
     },
     "identifier": {
-      "@container": "@set",
       "@id": "http://www.w3.org/ns/adms#identifier",
       "@type": "@id"
     },
     "income": {
       "@id": "https://w3id.org/adm/model/income",
       "@type": "@id"
+    },
+    "initialEndDate": {
+      "@id": "https://w3id.org/adm/model/initialEndDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
     },
     "isPartOf": {
       "@id": "http://purl.org/dc/terms/isPartOf",
@@ -115,10 +172,6 @@
     "modified": {
       "@id": "https://w3id.org/adm/model/modified",
       "@type": "http://www.w3.org/2001/XMLSchema#boolean"
-    },
-    "name": {
-      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "notation": {
       "@id": "http://www.w3.org/2004/02/skos/core#notation"
@@ -143,6 +196,14 @@
       "@id": "https://w3id.org/adm/model/providedTrainingHours",
       "@type": "http://www.w3.org/2001/XMLSchema#integer"
     },
+    "refersToNotice": {
+      "@id": "https://w3id.org/adm/model/refersToNotice",
+      "@type": "@id"
+    },
+    "refersToProcedure": {
+      "@id": "http://data.europa.eu/a4g/ontology#refersToProcedure",
+      "@type": "@id"
+    },
     "startDate": {
       "@id": "http://dbpedia.org/ontology/projectStartDate",
       "@type": "http://www.w3.org/2001/XMLSchema#date"
@@ -159,6 +220,10 @@
       "@id": "https://w3id.org/adm/model/totalCost",
       "@type": "@id"
     },
+    "totalTenders": {
+      "@id": "https://w3id.org/adm/model/totalTenders",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
     "trainedPeople": {
       "@id": "https://w3id.org/adm/model/trainedPeople",
       "@type": "http://www.w3.org/2001/XMLSchema#integer"
@@ -170,6 +235,10 @@
     "turnover": {
       "@id": "https://w3id.org/adm/model/turnover",
       "@type": "@id"
+    },
+    "validTenders": {
+      "@id": "https://w3id.org/adm/model/validTenders",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
     }
   }
 }

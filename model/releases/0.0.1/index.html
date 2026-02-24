@@ -222,7 +222,7 @@
         </p>
     <h3>Used Prefixes</h3>
         
-This specification uses the following prefixes to shorten the URIs for readibility.
+This specification uses the following prefixes to shorten the URIs for readability.
 
         <table id="table-namespaces" class="simple">
             <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
@@ -272,20 +272,24 @@ This specification uses the following prefixes to shorten the URIs for readibili
                             |
 			      <a href="#Beneficiary">Beneficiary</a> |
 			      <a href="#Block">Block</a> |
+			      <a href="#ContractAddenda">Contract Addenda</a> |
 			      <a href="#Document">Document</a> |
 			      <a href="#ESF">ESF</a> |
 			      <a href="#Identifier">Identifier</a> |
 			      <a href="#KeyExpert">KeyExpert</a> |
 			      <a href="#MonetaryValue">Monetary Value</a> |
+			      <a href="#Notice">Notice</a> |
 			      <a href="#Partner">Partner</a> |
 			      <a href="#Person">Person</a> |
+			      <a href="#Procedure">Procedure</a> |
+			      <a href="#ProcurementInfo">Procurement Info</a> |
                         </p>
                 
                 
                         <p>
                             And supported by these datatypes:
                             <br />
-                            | <a href="#Boolean">Boolean</a> | <a href="#Code">Code</a> | <a href="#Date">Date</a> | <a href="#Decimal">Decimal</a> | <a href="#Genericdate">Generic date</a> | <a href="#Integer">Integer</a> | <a href="#Literal">Literal</a> | <a href="#Text">Text</a> |
+                            | <a href="#Boolean">Boolean</a> | <a href="#Code">Code</a> | <a href="#Date">Date</a> | <a href="#DateTime">Date Time</a> | <a href="#Decimal">Decimal</a> | <a href="#Genericdate">Generic date</a> | <a href="#Integer">Integer</a> | <a href="#Literal">Literal</a> | <a href="#Text">Text</a> |
                         </p>
                 
     </div>
@@ -353,9 +357,14 @@ The main entities are those that form the core of the Application Profile.
                         <dd>
                             For this entity the following properties are defined: <a href="#Contract.belongsto">belongs to</a>
                             , <a href="#Contract.contracttype">contract type</a>
+                            , <a href="#Contract.finalenddate">final end date</a>
+                            , <a href="#Contract.hascontractaddenda">has contract addenda</a>
                             , <a href="#Contract.hascontractconclusiondate">has contract conclusion date</a>
+                            , <a href="#Contract.hascontractvalue">has contract value</a>
                             , <a href="#Contract.hascontractor">has contractor</a>
+                            , <a href="#Contract.hasinitialenddate">has initial end date</a>
                             , <a href="#Contract.hasKeyExpert">has KeyExpert</a>
+                            , <a href="#Contract.hasprocurementreference">has procurement reference</a>
                             , <a href="#Contract.modified">modified</a>
                             .
                     </dd>
@@ -482,6 +491,92 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
                             </tr>
                         
+                            <tr id="Contract.finalenddate"
+                                typeof="rdf:Property"
+                                resource="https://w3id.org/adm/model/finalEndDate"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20final end date%20in%20Contract&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23Contract.finalenddate" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/adm/model/finalEndDate"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/adm/model/finalEndDate"
+                                           data-placement="right">
+                                        final end date</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Date" data-placement="right">Date</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The contract end date when the contract is finished.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Contract.hascontractaddenda"
+                                typeof="rdf:Property"
+                                resource="https://w3id.org/adm/model/hasContractAddenda"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20has contract addenda%20in%20Contract&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23Contract.hascontractaddenda" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/adm/model/hasContractAddenda"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/adm/model/hasContractAddenda"
+                                           data-placement="right">
+                                        has contract addenda</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#ContractAddenda" data-placement="right">Contract Addenda</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The aggregated addendum to the contract.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
                             <tr id="Contract.hascontractconclusiondate"
                                 typeof="rdf:Property"
                                 resource="http://data.europa.eu/a4g/ontology#hasContractConclusionDate"
@@ -511,6 +606,49 @@ The main entities are those that form the core of the Application Profile.
                                 </td>
                                 <td property="rdfs:comment">
                                     The date the contract was signed by the last signatory party.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Contract.hascontractvalue"
+                                typeof="rdf:Property"
+                                resource="http://data.europa.eu/a4g/ontology#hasContractValue"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20has contract value%20in%20Contract&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23Contract.hascontractvalue" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/a4g/ontology#hasContractValue"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/a4g/ontology#hasContractValue"
+                                           data-placement="right">
+                                        has contract value</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#MonetaryValue" data-placement="right">Monetary Value</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Relation indicating the Monetary value of the Contract.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -569,6 +707,50 @@ contractor of the contract.
                                 </td>
                             </tr>
                         
+                            <tr id="Contract.hasinitialenddate"
+                                typeof="rdf:Property"
+                                resource="https://w3id.org/adm/model/initialEndDate"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20has initial end date%20in%20Contract&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23Contract.hasinitialenddate" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/adm/model/initialEndDate"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/adm/model/initialEndDate"
+                                           data-placement="right">
+                                        has initial end date</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Date" data-placement="right">Date</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The contract end date as initially defined when the contract was
+signed.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
                             <tr id="Contract.hasKeyExpert"
                                 typeof="rdf:Property"
                                 resource="https://w3id.org/adm/model/hasKeyExpert"
@@ -598,6 +780,49 @@ contractor of the contract.
                                 </td>
                                 <td property="rdfs:comment">
                                     Expert assigned on a contract
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Contract.hasprocurementreference"
+                                typeof="rdf:Property"
+                                resource="https://w3id.org/adm/model/hasProcurementInfo"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20has procurement reference%20in%20Contract&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23Contract.hasprocurementreference" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/adm/model/hasProcurementInfo"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/adm/model/hasProcurementInfo"
+                                           data-placement="right">
+                                        has procurement reference</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#ProcurementInfo" data-placement="right">Procurement Info</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..*
+                                </td>
+                                <td property="rdfs:comment">
+                                    The related information of the procurement the contract is covering.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -662,6 +887,8 @@ contract, or not.
         
     </div>
 </section>
+
+
 
 
 
@@ -865,6 +1092,12 @@ The details of the registration are provided as properties of the Identifier cla
 
 
 
+
+
+
+
+
+
    
         <section>
             <h3 id="Project">
@@ -901,11 +1134,11 @@ The details of the registration are provided as properties of the Identifier cla
                             , <a href="#Project.hasblock">has block</a>
                             , <a href="#Project.identifier">identifier</a>
                             , <a href="#Project.income">income</a>
-                            , <a href="#Project.name">name</a>
                             , <a href="#Project.othercontributions">other contributions</a>
                             , <a href="#Project.startdate">start date</a>
                             , <a href="#Project.status">status</a>
                             , <a href="#Project.thematicobjective">thematic objective</a>
+                            , <a href="#Project.title">title</a>
                             , <a href="#Project.totalcost">total cost</a>
                             .
                     </dd>
@@ -1204,49 +1437,6 @@ The details of the registration are provided as properties of the Identifier cla
                                 </td>
                             </tr>
                         
-                            <tr id="Project.name"
-                                typeof="rdf:Property"
-                                resource="http://www.w3.org/2000/01/rdf-schema#label"
-                                class="class mandatory">
-                                <td>
-				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20name%20in%20Project&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23Project.name" target="_blank" rel="noopener noreferrer" >
-					    <!--                                        <i class="icon">[o]</i> -->
-                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
-                                    </a>
-                                </td>
-                                <td>
-                                        <a href="http://www.w3.org/2000/01/rdf-schema#label"
-                                           data-toggle="tooltip"
-                                           data-content="http://www.w3.org/2000/01/rdf-schema#label"
-                                           data-placement="right">
-                                        name</a>
-                                </td>
-                                <td>
-                                    
-                                        
-                                            <a href="#Text" data-placement="right">Text</a>
-                                        
-                                    
-                                </td>
-                                <td>
-                                    1
-                                </td>
-                                <td property="rdfs:comment">
-                                    A human-readable version of a resource&#39;s name.
-                                </td>
-                                <td property="skos:scopeNote">
-                                    
-                                </td>
-				<!--
-                                <td>
-                                    
-                                </td>
-				-->
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        
                             <tr id="Project.othercontributions"
                                 typeof="rdf:Property"
                                 resource="https://w3id.org/adm/model/otherContributions"
@@ -1408,6 +1598,49 @@ The details of the registration are provided as properties of the Identifier cla
                                 </td>
                                 <td property="skos:scopeNote">
                                     The recommended codelist is the <a href= "#list-project-thematicObjective" >Thematic Objective</a> list.
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Project.title"
+                                typeof="rdf:Property"
+                                resource="http://www.w3.org/2000/01/rdf-schema#label"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20title%20in%20Project&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23Project.title" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://www.w3.org/2000/01/rdf-schema#label"
+                                           data-toggle="tooltip"
+                                           data-content="http://www.w3.org/2000/01/rdf-schema#label"
+                                           data-placement="right">
+                                        title</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Text" data-placement="right">Text</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    A human-readable version of a resource&#39;s name.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
                                 </td>
 				<!--
                                 <td>
@@ -2046,16 +2279,16 @@ application.
 
    
         <section>
-            <h3 id="Document">
-                <a href="http://data.europa.eu/a4g/ontology#Document"
+            <h3 id="ContractAddenda">
+                <a href="https://w3id.org/adm/model/ContractAddenda"
                    data-toggle="tooltip"
-                   data-content="http://data.europa.eu/a4g/ontology#Document"
-                   data-placement="right">Document</a>
+                   data-content="https://w3id.org/adm/model/ContractAddenda"
+                   data-placement="right">Contract Addenda</a>
 
             </h3>
 	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
 		<!-- outcomment github feedback possibility
-                <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20Document&body=Explain%20your%20issue"}}>
+                <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20ContractAddenda&body=Explain%20your%20issue"}}>
                    <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
 		</a>
 		-->
@@ -2064,7 +2297,7 @@ application.
                     Definition
                 </dt>
                 <dd>
-                    A set of interrelated Business Information representing the Business facts and associated metadata.
+                    Monetary additions to a contract.
                 </dd>
                 
                 
@@ -2074,7 +2307,8 @@ application.
                     </dt>
                     
                         <dd>
-                            For this entity the following properties are defined: <a href="#Document.identifier">identifier</a>
+                            For this entity the following properties are defined: <a href="#ContractAddenda.amount">amount</a>
+                            , <a href="#ContractAddenda.count">count</a>
                             .
                     </dd>
                 
@@ -2114,6 +2348,218 @@ application.
                     </thead>
                     <tbody class="supertype">
                         
+                            <tr id="ContractAddenda.amount"
+                                typeof="rdf:Property"
+                                resource="https://w3id.org/adm/model/amount"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20amount%20in%20Contract Addenda&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23ContractAddenda.amount" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/adm/model/amount"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/adm/model/amount"
+                                           data-placement="right">
+                                        amount</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#MonetaryValue" data-placement="right">Monetary Value</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The total amount of the contract addenda.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="ContractAddenda.count"
+                                typeof="rdf:Property"
+                                resource="https://w3id.org/adm/model/count"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20count%20in%20Contract Addenda&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23ContractAddenda.count" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/adm/model/count"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/adm/model/count"
+                                           data-placement="right">
+                                        count</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Integer" data-placement="right">Integer</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Number of addenda for the concerned contract.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="Document">
+                <a href="http://data.europa.eu/a4g/ontology#Document"
+                   data-toggle="tooltip"
+                   data-content="http://data.europa.eu/a4g/ontology#Document"
+                   data-placement="right">Document</a>
+
+            </h3>
+	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
+                <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20Document&body=Explain%20your%20issue"}}>
+                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+		</a>
+		-->
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    A set of interrelated Business Information representing the Business facts and associated metadata.
+                </dd>
+                
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Document.description">description</a>
+                            , <a href="#Document.identifier">identifier</a>
+                            , <a href="#Document.title">title</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:14%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition 
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Usage
+                            </th>
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Codelist
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                                DCAT
+                            </th>
+			    -->
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Document.description"
+                                typeof="rdf:Property"
+                                resource="http://purl.org/dc/terms/description"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20description%20in%20Document&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23Document.description" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/description"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/description"
+                                           data-placement="right">
+                                        description</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Text" data-placement="right">Text</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    An account of the resource.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
                             <tr id="Document.identifier"
                                 typeof="rdf:Property"
                                 resource="http://www.w3.org/ns/adms#identifier"
@@ -2143,6 +2589,49 @@ application.
                                 </td>
                                 <td property="rdfs:comment">
                                     Links a resource to an adms:Identifier class.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Document.title"
+                                typeof="rdf:Property"
+                                resource="http://purl.org/dc/terms/title"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20title%20in%20Document&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23Document.title" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://purl.org/dc/terms/title"
+                                           data-toggle="tooltip"
+                                           data-content="http://purl.org/dc/terms/title"
+                                           data-placement="right">
+                                        title</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Text" data-placement="right">Text</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1
+                                </td>
+                                <td property="rdfs:comment">
+                                    A name given to the resource.
                                 </td>
                                 <td property="skos:scopeNote">
                                     
@@ -2784,6 +3273,174 @@ application.
 
    
         <section>
+            <h3 id="Notice">
+                <a href="http://data.europa.eu/a4g/ontology#Notice"
+                   data-toggle="tooltip"
+                   data-content="http://data.europa.eu/a4g/ontology#Notice"
+                   data-placement="right">Notice</a>
+
+            </h3>
+	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
+                <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20Notice&body=Explain%20your%20issue"}}>
+                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+		</a>
+		-->
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    Document published by the Buyer about market opportunities and results.
+                </dd>
+                
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Notice.haselectronicsenderdispatchdate">has electronic sender dispatch date</a>
+                            , <a href="#Notice.referstoprocedure">refers to procedure</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:14%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition 
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Usage
+                            </th>
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Codelist
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                                DCAT
+                            </th>
+			    -->
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Notice.haselectronicsenderdispatchdate"
+                                typeof="rdf:Property"
+                                resource="http://data.europa.eu/a4g/ontology#hasESenderDispatchDate"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20has electronic sender dispatch date%20in%20Notice&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23Notice.haselectronicsenderdispatchdate" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/a4g/ontology#hasESenderDispatchDate"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/a4g/ontology#hasESenderDispatchDate"
+                                           data-placement="right">
+                                        has electronic sender dispatch date</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#DateTime" data-placement="right">Date Time</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    	The date and time the notice was transmitted electronically by the eSender to the Publications Office of the European Union.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="Notice.referstoprocedure"
+                                typeof="rdf:Property"
+                                resource="http://data.europa.eu/a4g/ontology#refersToProcedure"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20refers to procedure%20in%20Notice&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23Notice.referstoprocedure" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/a4g/ontology#refersToProcedure"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/a4g/ontology#refersToProcedure"
+                                           data-placement="right">
+                                        refers to procedure</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Procedure" data-placement="right">Procedure</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The related procedure to which the notice refers to.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
             <h3 id="Partner">
                 <a href="https://w3id.org/adm/model/Partner"
                    data-toggle="tooltip"
@@ -3063,6 +3720,387 @@ application.
 
 
 
+   
+        <section>
+            <h3 id="Procedure">
+                <a href="http://data.europa.eu/a4g/ontology#Procedure"
+                   data-toggle="tooltip"
+                   data-content="http://data.europa.eu/a4g/ontology#Procedure"
+                   data-placement="right">Procedure</a>
+
+            </h3>
+	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
+                <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20Procedure&body=Explain%20your%20issue"}}>
+                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+		</a>
+		-->
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    A legally defined set of administrative activities conducted  to conclude one or more Contracts.
+                </dd>
+                
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#Procedure.hasproceduretype">has procedure type</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:14%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition 
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Usage
+                            </th>
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Codelist
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                                DCAT
+                            </th>
+			    -->
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Procedure.hasproceduretype"
+                                typeof="rdf:Property"
+                                resource="http://data.europa.eu/a4g/ontology#hasProcedureType"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20has procedure type%20in%20Procedure&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23Procedure.hasproceduretype" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="http://data.europa.eu/a4g/ontology#hasProcedureType"
+                                           data-toggle="tooltip"
+                                           data-content="http://data.europa.eu/a4g/ontology#hasProcedureType"
+                                           data-placement="right">
+                                        has procedure type</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Code" data-placement="right">Code</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Identification of the Procedure used.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    The recommended control vocabulary is the <a href=" 	
+https://op.europa.eu/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/procurement-procedure-type" > Procurement Procedure Type </a> list from Publications Office. 
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
+   
+        <section>
+            <h3 id="ProcurementInfo">
+                <a href="https://w3id.org/adm/model/ProcurementInfo"
+                   data-toggle="tooltip"
+                   data-content="https://w3id.org/adm/model/ProcurementInfo"
+                   data-placement="right">Procurement Info</a>
+
+            </h3>
+	        <!-- XXX an image in the h3 will break the rendering of the Table Of Contents of Respec -->
+		<!-- outcomment github feedback possibility
+                <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20ProcurementInfo&body=Explain%20your%20issue"}}>
+                   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+		</a>
+		-->
+            <dl>
+                <dt>
+                    Definition
+                </dt>
+                <dd>
+                    Aggregated information about the procurement related to the contract.
+                </dd>
+                
+                
+                
+                    <dt>
+                        Properties
+                    </dt>
+                    
+                        <dd>
+                            For this entity the following properties are defined: <a href="#ProcurementInfo.excludedtenders">excluded tenders</a>
+                            , <a href="#ProcurementInfo.referstonotice">refers to notice</a>
+                            , <a href="#ProcurementInfo.totaltenders">total tenders</a>
+                            , <a href="#ProcurementInfo.validtenders">valid tenders</a>
+                            .
+                    </dd>
+                
+            </dl>
+        </div>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                            </th>
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:14%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:14%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition 
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Usage
+                            </th>
+			    <!--
+                            <th class="data-table__header-title--sortable" style="width:3%">
+                                Codelist
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:5%">
+                                DCAT
+                            </th>
+			    -->
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="ProcurementInfo.excludedtenders"
+                                typeof="rdf:Property"
+                                resource="https://w3id.org/adm/model/excludedTenders"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20excluded tenders%20in%20Procurement Info&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23ProcurementInfo.excludedtenders" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/adm/model/excludedTenders"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/adm/model/excludedTenders"
+                                           data-placement="right">
+                                        excluded tenders</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Integer" data-placement="right">Integer</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Number of disqualified tender offers.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="ProcurementInfo.referstonotice"
+                                typeof="rdf:Property"
+                                resource="https://w3id.org/adm/model/refersToNotice"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20refers to notice%20in%20Procurement Info&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23ProcurementInfo.referstonotice" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/adm/model/refersToNotice"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/adm/model/refersToNotice"
+                                           data-placement="right">
+                                        refers to notice</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Notice" data-placement="right">Notice</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    The related notice to the contract.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="ProcurementInfo.totaltenders"
+                                typeof="rdf:Property"
+                                resource="https://w3id.org/adm/model/totalTenders"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20total tenders%20in%20Procurement Info&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23ProcurementInfo.totaltenders" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/adm/model/totalTenders"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/adm/model/totalTenders"
+                                           data-placement="right">
+                                        total tenders</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Integer" data-placement="right">Integer</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Total number of valid and disqualified tenders.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                            <tr id="ProcurementInfo.validtenders"
+                                typeof="rdf:Property"
+                                resource="https://w3id.org/adm/model/validTenders"
+                                class="class mandatory">
+                                <td>
+				    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20valid tenders%20in%20Procurement Info&body=Explain%20your%20issue%20for%20https://semiceu.github.io/ADM/releases/0.0.1%23ProcurementInfo.validtenders" target="_blank" rel="noopener noreferrer" >
+					    <!--                                        <i class="icon">[o]</i> -->
+                                        <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
+                                    </a>
+                                </td>
+                                <td>
+                                        <a href="https://w3id.org/adm/model/validTenders"
+                                           data-toggle="tooltip"
+                                           data-content="https://w3id.org/adm/model/validTenders"
+                                           data-placement="right">
+                                        valid tenders</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            <a href="#Integer" data-placement="right">Integer</a>
+                                        
+                                    
+                                </td>
+                                <td>
+                                    0..1
+                                </td>
+                                <td property="rdfs:comment">
+                                    Number of received valid tender offers.
+                                </td>
+                                <td property="skos:scopeNote">
+                                    
+                                </td>
+				<!--
+                                <td>
+                                    
+                                </td>
+				-->
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </div>
+</section>
+
+
+
+
+
 
 
 
@@ -3138,6 +4176,22 @@ application.
                 
 		</td><td>
                     Date represents top-open intervals of exactly one day in length on the timelines of dateTime, beginning on the beginning moment of each day, up to but not including the beginning moment of the next day).  For non-timezoned values, the top-open intervals disjointly cover the non-timezoned timeline, one per day.  For timezoned values, the intervals begin at every minute and therefore overlap.
+		</td></tr>
+		<tr><td>
+                   <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20DateTime&body=Explain%20your%20issue"}}>
+                     <img src="html/callout.png" loading="lazy" alt="(create issue)" width="50" height="50"/>
+		   </a>
+		</td><td>
+                
+                    <div id="DateTime">
+                        <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                           data-toggle="tooltip"
+                           data-content="http://www.w3.org/2001/XMLSchema#dateTime"
+                           data-placement="right">Date Time</a>
+                    </div>
+                
+		</td><td>
+                    dateTime represents instants of time, optionally marked with a particular time zone offset.  Values representing the same instant but having different time zone offsets are equal but not identical.
 		</td></tr>
 		<tr><td>
                    <a href="https://github.com/SEMICeu/ADM/issues/new?title=Issue%20for%20Decimal&body=Explain%20your%20issue"}}>
@@ -3496,6 +4550,7 @@ application.
     <h2> Examples </h2>
         
 <h3 class="h3 examples" id="example-rdf_project">Example Project</h3>
+<h3 class="h3 examples" id="example-rdf_contract">Example Contract</h3>
 
 </section>
 
@@ -3734,6 +4789,26 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
 					
 						
 					
@@ -3773,8 +4848,38 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><a href="#Contract">Contract</a></td>
 								<td><div class="shorten">http://data.europa.eu/a4g/ontology#Contract</div></td>
 								<td></td>
+								<td><a href="#Contract.finalenddate">final end date </a></td>
+								<td><div class="shorten">https://w3id.org/adm/model/finalEndDate</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Contract">Contract</a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#Contract</div></td>
+								<td></td>
+								<td><a href="#Contract.hascontractaddenda">has contract addenda </a></td>
+								<td><div class="shorten">https://w3id.org/adm/model/hasContractAddenda</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Contract">Contract</a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#Contract</div></td>
+								<td></td>
 								<td><a href="#Contract.hascontractconclusiondate">has contract conclusion date </a></td>
 								<td><div class="shorten">http://data.europa.eu/a4g/ontology#hasContractConclusionDate</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Contract">Contract</a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#Contract</div></td>
+								<td></td>
+								<td><a href="#Contract.hascontractvalue">has contract value </a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#hasContractValue</div></td>
 							</tr>
 						
 					
@@ -3793,8 +4898,28 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><a href="#Contract">Contract</a></td>
 								<td><div class="shorten">http://data.europa.eu/a4g/ontology#Contract</div></td>
 								<td></td>
+								<td><a href="#Contract.hasinitialenddate">has initial end date </a></td>
+								<td><div class="shorten">https://w3id.org/adm/model/initialEndDate</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Contract">Contract</a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#Contract</div></td>
+								<td></td>
 								<td><a href="#Contract.hasKeyExpert">has KeyExpert </a></td>
 								<td><div class="shorten">https://w3id.org/adm/model/hasKeyExpert</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Contract">Contract</a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#Contract</div></td>
+								<td></td>
+								<td><a href="#Contract.hasprocurementreference">has procurement reference </a></td>
+								<td><div class="shorten">https://w3id.org/adm/model/hasProcurementInfo</div></td>
 							</tr>
 						
 					
@@ -3815,6 +4940,49 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 					
 						
 					
+						
+					
+					
+						
+					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#ContractAddenda">Contract Addenda</a></td>
+								<td><div class="shorten">https://w3id.org/adm/model/ContractAddenda</div></td>
+								<td></td>
+								<td><a href="#ContractAddenda.amount">amount </a></td>
+								<td><div class="shorten">https://w3id.org/adm/model/amount</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#ContractAddenda">Contract Addenda</a></td>
+								<td><div class="shorten">https://w3id.org/adm/model/ContractAddenda</div></td>
+								<td></td>
+								<td><a href="#ContractAddenda.count">count </a></td>
+								<td><div class="shorten">https://w3id.org/adm/model/count</div></td>
+							</tr>
+						
+					
+				
+			</tr>
+		
+				
+					
+						
+					
+						
+					
+						
+					
+					
+						
+					
+						
 					
 						
 					
@@ -3824,8 +4992,28 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><a href="#Document">Document</a></td>
 								<td><div class="shorten">http://data.europa.eu/a4g/ontology#Document</div></td>
 								<td></td>
+								<td><a href="#Document.description">description </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/description</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Document">Document</a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#Document</div></td>
+								<td></td>
 								<td><a href="#Document.identifier">identifier </a></td>
 								<td><div class="shorten">http://www.w3.org/ns/adms#identifier</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Document">Document</a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#Document</div></td>
+								<td></td>
+								<td><a href="#Document.title">title </a></td>
+								<td><div class="shorten">http://purl.org/dc/terms/title</div></td>
 							</tr>
 						
 					
@@ -3998,6 +5186,41 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 			</tr>
 		
 				
+					
+						
+					
+						
+					
+					
+						
+					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#Notice">Notice</a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#Notice</div></td>
+								<td></td>
+								<td><a href="#Notice.haselectronicsenderdispatchdate">has electronic sender dispatch date </a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#hasESenderDispatchDate</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Notice">Notice</a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#Notice</div></td>
+								<td></td>
+								<td><a href="#Notice.referstoprocedure">refers to procedure </a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#refersToProcedure</div></td>
+							</tr>
+						
+					
+				
+			</tr>
+		
+				
 					<tr>
 						<td><a href="#Partner">Partner</a></td>
 						<td><div class="shorten">https://w3id.org/adm/model/Partner</div></td>
@@ -4051,6 +5274,90 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td></td>
 								<td><a href="#Person.givenname">given name </a></td>
 								<td><div class="shorten">http://xmlns.com/foaf/0.1/givenName</div></td>
+							</tr>
+						
+					
+				
+			</tr>
+		
+				
+					
+						
+					
+					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#Procedure">Procedure</a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#Procedure</div></td>
+								<td></td>
+								<td><a href="#Procedure.hasproceduretype">has procedure type </a></td>
+								<td><div class="shorten">http://data.europa.eu/a4g/ontology#hasProcedureType</div></td>
+							</tr>
+						
+					
+				
+			</tr>
+		
+				
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+					
+						
+							<tr>
+								<td><a href="#ProcurementInfo">Procurement Info</a></td>
+								<td><div class="shorten">https://w3id.org/adm/model/ProcurementInfo</div></td>
+								<td></td>
+								<td><a href="#ProcurementInfo.excludedtenders">excluded tenders </a></td>
+								<td><div class="shorten">https://w3id.org/adm/model/excludedTenders</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#ProcurementInfo">Procurement Info</a></td>
+								<td><div class="shorten">https://w3id.org/adm/model/ProcurementInfo</div></td>
+								<td></td>
+								<td><a href="#ProcurementInfo.referstonotice">refers to notice </a></td>
+								<td><div class="shorten">https://w3id.org/adm/model/refersToNotice</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#ProcurementInfo">Procurement Info</a></td>
+								<td><div class="shorten">https://w3id.org/adm/model/ProcurementInfo</div></td>
+								<td></td>
+								<td><a href="#ProcurementInfo.totaltenders">total tenders </a></td>
+								<td><div class="shorten">https://w3id.org/adm/model/totalTenders</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#ProcurementInfo">Procurement Info</a></td>
+								<td><div class="shorten">https://w3id.org/adm/model/ProcurementInfo</div></td>
+								<td></td>
+								<td><a href="#ProcurementInfo.validtenders">valid tenders </a></td>
+								<td><div class="shorten">https://w3id.org/adm/model/validTenders</div></td>
 							</tr>
 						
 					
@@ -4174,16 +5481,6 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td><a href="#Project">Project</a></td>
 								<td><div class="shorten">http://dbpedia.org/ontology/Project</div></td>
 								<td></td>
-								<td><a href="#Project.name">name </a></td>
-								<td><div class="shorten">http://www.w3.org/2000/01/rdf-schema#label</div></td>
-							</tr>
-						
-					
-						
-							<tr>
-								<td><a href="#Project">Project</a></td>
-								<td><div class="shorten">http://dbpedia.org/ontology/Project</div></td>
-								<td></td>
 								<td><a href="#Project.othercontributions">other contributions </a></td>
 								<td><div class="shorten">https://w3id.org/adm/model/otherContributions</div></td>
 							</tr>
@@ -4216,6 +5513,16 @@ The properties are indicated as <it>mandatory, recommended, optional</it> and <i
 								<td></td>
 								<td><a href="#Project.thematicobjective">thematic objective </a></td>
 								<td><div class="shorten">https://w3id.org/adm/model/thematicObjective</div></td>
+							</tr>
+						
+					
+						
+							<tr>
+								<td><a href="#Project">Project</a></td>
+								<td><div class="shorten">http://dbpedia.org/ontology/Project</div></td>
+								<td></td>
+								<td><a href="#Project.title">title </a></td>
+								<td><div class="shorten">http://www.w3.org/2000/01/rdf-schema#label</div></td>
 							</tr>
 						
 					
