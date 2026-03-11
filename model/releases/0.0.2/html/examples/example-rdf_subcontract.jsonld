@@ -1,0 +1,73 @@
+{
+  "@context": [
+  "https://semiceu.github.io/uri.semic.eu-generated/ADM/releases/0.0.2/context/arachne.jsonld",
+  {
+    "adm": "https://w3id.org/adm/model/",
+    "adms": "http://www.w3.org/ns/adms#",
+    "cv": "http://data.europa.eu/m8g/",
+    "dct": "http://purl.org/dc/terms/",
+    "epo": "http://data.europa.eu/a4g/ontology#",
+    "ex": "http://example.com/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "frapo": "http://purl.org/cerif/frapo/",
+    "legal": "http://www.w3.org/ns/legal#",
+    "locn": "http://www.w3.org/ns/locn#",
+    "person": "http://www.w3.org/ns/person#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }],
+  "@graph": [
+    {
+      "@id": "ex:subcontract1",
+      "@type": "adm:Subcontract",
+      "adms:identifier": {
+        "@id": "ex:identifier9"
+      },
+      "dct:isPartOf": {
+        "@id": "ex:contract1"
+      },
+      "adm:hasSubcontractor": {
+        "@id": "ex:subcontractor1"
+      },
+      "adm:amount": {
+        "@id": "_:g4"
+      },
+    },
+    {
+      "@id": "ex:identifier9",
+      "@type": "adms:Identifier",
+      "skos:notation": "SC-001"
+    },
+    {
+      "@id": "ex:subcontractor1",
+      "@type": "epo:Subcontractor",
+      "epo:playedBy" : {
+        "@id" : "ex:legalEntity2"
+      }
+    },
+    {
+      "@id": "ex:legalEntity2",
+      "@type": "legal:LegalEntity",
+      "adms:identifier": {
+        "@id": "ex:identifier10"
+      }
+    },
+     {
+      "@id": "ex:identifier10",
+      "@type": "adms:Identifier",
+      "skos:notation": "VE-124-88"
+    },
+     {
+      "@id": "_:g4",
+      "@type": "epo:MonetaryValue",
+      "epo:hasCurrency": {
+        "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
+      },
+      "epo:hasAmountValue": {
+        "@type": "xsd:decimal",
+        "@value": "12789.26"
+      }
+    }
+  ]
+}
