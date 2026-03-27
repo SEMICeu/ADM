@@ -1,14 +1,18 @@
 {
   "@context": {
+    "Address": "http://www.w3.org/ns/locn#Address",
     "Agent": "http://xmlns.com/foaf/0.1/Agent",
     "AgentInRole": "http://data.europa.eu/a4g/ontology#AgentInRole",
     "Beneficiary": "https://w3id.org/adm/model/Beneficiary",
-    "Block": "https://w3id.org/adm/model/Block",
     "Boolean": "http://www.w3.org/2001/XMLSchema#boolean",
     "Code": "http://www.w3.org/2004/02/skos/core#Concept",
     "ConsortiumMember": "https://w3id.org/adm/model/ConsortiumMember",
     "Contract": "http://data.europa.eu/a4g/ontology#Contract",
     "ContractAddenda": "https://w3id.org/adm/model/ContractAddenda",
+    "ContractAddenda.amount": {
+      "@id": "https://w3id.org/adm/model/contractAddendaAmount",
+      "@type": "@id"
+    },
     "Contractor": "http://data.europa.eu/a4g/ontology#Contractor",
     "Date": "http://www.w3.org/2001/XMLSchema#date",
     "DateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
@@ -23,44 +27,78 @@
       "@type": "@id"
     },
     "ESF": "https://w3id.org/adm/model/ESF",
+    "EnergyEfficiency": "https://w3id.org/adm/model/EnergyEfficiency",
+    "FinalBeneficialOwner": "https://w3id.org/adm/model/FinalBeneficialOwner",
+    "Funding": "http://purl.org/cerif/frapo/Funding",
     "FundingProgramme": "http://purl.org/cerif/frapo/FundingProgramme",
-    "FundingProgramme.title": {
-      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
     "GenericDate": "http://data.europa.eu/m8g/GenericDate",
-    "Grant": "http://purl.org/cerif/frapo/Grant",
     "Identifier": "http://www.w3.org/ns/adms#Identifier",
     "Integer": "http://www.w3.org/2001/XMLSchema#integer",
+    "Invoice": "http://data.europa.eu/a4g/ontology#Invoice",
+    "Invoice.amount": {
+      "@id": "https://w3id.org/adm/model/invoiceAmount",
+      "@type": "@id"
+    },
     "KeyExpert": "https://w3id.org/adm/model/KeyExpert",
     "LegalEntity": "http://www.w3.org/ns/legal#LegalEntity",
+    "LegalRepresentative": "http://data.europa.eu/a4g/ontology#LegalRepresentative",
     "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
     "MonetaryValue": "http://data.europa.eu/a4g/ontology#MonetaryValue",
     "Notice": "http://data.europa.eu/a4g/ontology#Notice",
+    "OperationalProgramme": "https://w3id.org/adm/model/OperationalProgramme",
     "Partner": "https://w3id.org/adm/model/Partner",
     "Person": "http://www.w3.org/ns/person#Person",
     "Procedure": "http://data.europa.eu/a4g/ontology#Procedure",
     "ProcurementInfo": "https://w3id.org/adm/model/ProcurementInfo",
-    "Project": "http://xmlns.com/foaf/0.1/Project",
+    "Project": "http://data.europa.eu/a4g/ontology#Project",
     "Project.title": {
       "@id": "http://www.w3.org/2000/01/rdf-schema#label",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
+    "ProjectRole": "https://w3id.org/adm/model/ProjectRole",
+    "ProjectType": "https://w3id.org/adm/model/ProjectType",
+    "PublicOrganisation": "http://data.europa.eu/m8g/PublicOrganisation",
+    "Railroad": "https://w3id.org/adm/model/Railroad",
+    "Road": "https://w3id.org/adm/model/Road",
+    "SME": "https://w3id.org/adm/model/SME",
     "ServiceProvider": "https://w3id.org/adm/model/ServiceProvider",
+    "SolidWaste": "https://w3id.org/adm/model/SolidWaste",
     "Subcontract": "https://w3id.org/adm/model/Subcontract",
+    "Subcontract.amount": {
+      "@id": "https://w3id.org/adm/model/subContractAmount",
+      "@type": "@id"
+    },
     "Subcontractor": "http://data.europa.eu/a4g/ontology#Subcontractor",
     "Text": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-    "amount": {
-      "@id": "https://w3id.org/adm/model/amount",
+    "UltimateOwner": "https://w3id.org/adm/model/UltimateOwner",
+    "VATNumber": {
+      "@id": "https://w3id.org/adm/model/VATNumber",
       "@type": "@id"
+    },
+    "WaterWasteSupply": "https://w3id.org/adm/model/WaterWasteSupply",
+    "actualWasteTreatmentCapacity": {
+      "@id": "https://w3id.org/adm/model/actualWasteTreatmentCapacity",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "adminUnitL1": {
+      "@id": "http://www.w3.org/ns/locn#adminUnitL1",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "belongsTo": {
       "@id": "https://w3id.org/adm/model/belongsTo",
       "@type": "@id"
     },
+    "constructionType": {
+      "@id": "https://w3id.org/adm/model/constructionType",
+      "@type": "@id"
+    },
     "contractType": {
       "@id": "https://w3id.org/adm/model/contractType",
       "@type": "@id"
+    },
+    "corrProcurementProcedure": {
+      "@id": "https://w3id.org/adm/model/corrProcurementProcedure",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "count": {
       "@id": "https://w3id.org/adm/model/count",
@@ -79,6 +117,10 @@
       "@id": "https://w3id.org/adm/model/dg",
       "@type": "@id"
     },
+    "energyDecrease": {
+      "@id": "https://w3id.org/adm/model/energyDecrease",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
     "excludedTenders": {
       "@id": "https://w3id.org/adm/model/excludedTenders",
       "@type": "http://www.w3.org/2001/XMLSchema#integer"
@@ -92,6 +134,18 @@
       "@id": "https://w3id.org/adm/model/finalEndDate",
       "@type": "http://www.w3.org/2001/XMLSchema#date"
     },
+    "function": {
+      "@id": "https://w3id.org/adm/model/function",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "fundingAmount": {
+      "@id": "https://w3id.org/adm/model/fundingAmount",
+      "@type": "@id"
+    },
+    "fundingType": {
+      "@id": "https://w3id.org/adm/model/fundingType",
+      "@type": "@id"
+    },
     "givenName": {
       "@container": "@set",
       "@id": "http://xmlns.com/foaf/0.1/givenName",
@@ -103,10 +157,6 @@
     },
     "hasBeneficiary": {
       "@id": "https://w3id.org/adm/model/hasBeneficiary",
-      "@type": "@id"
-    },
-    "hasBlock": {
-      "@id": "https://w3id.org/adm/model/hasBlock",
       "@type": "@id"
     },
     "hasConsortiumMember": {
@@ -142,6 +192,11 @@
       "@id": "http://purl.org/cerif/frapo/hasEndDate",
       "@type": "http://www.w3.org/2001/XMLSchema#date"
     },
+    "hasFinalBeneficialOwner": {
+      "@container": "@set",
+      "@id": "https://w3id.org/adm/model/hasFinalBeneficialOwner",
+      "@type": "@id"
+    },
     "hasFundingProgramme": {
       "@container": "@set",
       "@id": "https://w3id.org/adm/model/hasFundingProgramme",
@@ -150,6 +205,11 @@
     "hasKeyExpert": {
       "@container": "@set",
       "@id": "https://w3id.org/adm/model/hasKeyExpert",
+      "@type": "@id"
+    },
+    "hasLegalRepresentative": {
+      "@container": "@set",
+      "@id": "https://w3id.org/adm/model/hasLegalRepresentative",
       "@type": "@id"
     },
     "hasPartner": {
@@ -171,6 +231,15 @@
       "@id": "https://w3id.org/adm/model/hasProject",
       "@type": "@id"
     },
+    "hasProjectRole": {
+      "@container": "@set",
+      "@id": "https://w3id.org/adm/model/hasProjectRole",
+      "@type": "@id"
+    },
+    "hasProjectType": {
+      "@id": "https://w3id.org/adm/model/hasProjectType",
+      "@type": "@id"
+    },
     "hasServiceProvider": {
       "@container": "@set",
       "@id": "https://w3id.org/adm/model/hasServiceProvider",
@@ -189,7 +258,13 @@
       "@type": "@id"
     },
     "identifier": {
+      "@container": "@set",
       "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
+    },
+    "implements": {
+      "@container": "@set",
+      "@id": "https://w3id.org/adm/model/implements",
       "@type": "@id"
     },
     "income": {
@@ -200,28 +275,53 @@
       "@id": "https://w3id.org/adm/model/initialEndDate",
       "@type": "http://www.w3.org/2001/XMLSchema#date"
     },
+    "invoiceType": {
+      "@id": "https://w3id.org/adm/model/invoiceType",
+      "@type": "@id"
+    },
     "isFundedBy": {
       "@container": "@set",
       "@id": "http://purl.org/cerif/frapo/isFundedBy",
+      "@type": "@id"
+    },
+    "isManagedBy": {
+      "@id": "https://w3id.org/adm/model/isManagedBy",
       "@type": "@id"
     },
     "isPartOf": {
       "@id": "http://purl.org/dc/terms/isPartOf",
       "@type": "@id"
     },
-    "legalIdentifier": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/legal#legalIdentifier",
+    "issued": {
+      "@id": "http://purl.org/dc/terms/issued",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "landCost": {
+      "@id": "https://w3id.org/adm/model/landCost",
       "@type": "@id"
+    },
+    "legalName": {
+      "@id": "http://www.w3.org/ns/legal#legalName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "lengthOfTheSewageNetworkToBeRenovatedConstructed": {
+      "@id": "https://w3id.org/adm/model/lengthOfTheSewageNetworkToBeRenovatedConstructed",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "lengthOfTheWaterSupplyNetworkToBe": {
+      "@id": "https://w3id.org/adm/model/LengthOfTheWaterSupplyNetworkToBeRenovatedConstructed",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "locatorDesignator": {
+      "@id": "http://www.w3.org/ns/locn#locatorDesignator"
+    },
+    "locatorName": {
+      "@id": "http://www.w3.org/ns/locn#locatorName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "modified": {
       "@id": "https://w3id.org/adm/model/modified",
       "@type": "http://www.w3.org/2001/XMLSchema#boolean"
-    },
-    "name": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "notation": {
       "@id": "http://www.w3.org/2004/02/skos/core#notation"
@@ -234,21 +334,69 @@
       "@id": "https://w3id.org/adm/model/otherContributions",
       "@type": "@id"
     },
+    "paymentDate": {
+      "@id": "https://w3id.org/adm/model/paymentDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
     "peopleToTrain": {
       "@id": "https://w3id.org/adm/model/peopleToTrain",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "personnelAfterProject": {
+      "@id": "https://w3id.org/adm/model/personnelAfterProject",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "personnelAsAgreed": {
+      "@id": "https://w3id.org/adm/model/personnelAsAgreed",
       "@type": "http://www.w3.org/2001/XMLSchema#integer"
     },
     "playedBy": {
       "@id": "http://data.europa.eu/a4g/ontology#playedBy",
       "@type": "@id"
     },
+    "popEqServedByWasteWaterTreatment": {
+      "@id": "https://w3id.org/adm/model/popEqServedByWasteWaterTreatment",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "popEqToBeServedByWasteWaterTreatment": {
+      "@id": "https://w3id.org/adm/model/popEqToBeServedByWasteWaterTreatment",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "popToBeServedByWaterSupplyNetwork": {
+      "@id": "https://w3id.org/adm/model/popToBeServedByWaterSupplyNetwork",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "postCode": {
+      "@id": "http://www.w3.org/ns/locn#postCode"
+    },
+    "postName": {
+      "@id": "http://www.w3.org/ns/locn#postName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "preferredLabel": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
     "projectType": {
-      "@id": "https://w3id.org/adm/model/projectType",
+      "@id": "https://w3id.org/adm/model/projectTypeType",
       "@type": "@id"
     },
     "providedTrainingHours": {
       "@id": "https://w3id.org/adm/model/providedTrainingHours",
       "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "railLength": {
+      "@id": "https://w3id.org/adm/model/railLength",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "railType": {
+      "@id": "https://w3id.org/adm/model/railType",
+      "@type": "@id"
+    },
+    "refersTo": {
+      "@id": "http://data.europa.eu/a4g/ontology#refersToProject",
+      "@type": "@id"
     },
     "refersToNotice": {
       "@id": "https://w3id.org/adm/model/refersToNotice",
@@ -258,6 +406,26 @@
       "@id": "http://data.europa.eu/a4g/ontology#refersToProcedure",
       "@type": "@id"
     },
+    "registeredAddress": {
+      "@id": "http://data.europa.eu/m8g/registeredAddress",
+      "@type": "@id"
+    },
+    "roadLength": {
+      "@id": "https://w3id.org/adm/model/roadLength",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "roadType": {
+      "@id": "https://w3id.org/adm/model/roadType",
+      "@type": "@id"
+    },
+    "sewageNetworkCompCost": {
+      "@id": "https://w3id.org/adm/model/sewageNetworkCompCost",
+      "@type": "@id"
+    },
+    "solidWasteType": {
+      "@id": "https://w3id.org/adm/model/solidWasteType",
+      "@type": "@id"
+    },
     "status": {
       "@id": "http://www.w3.org/ns/adms#status",
       "@type": "@id"
@@ -265,6 +433,10 @@
     "thematicObjective": {
       "@id": "https://w3id.org/adm/model/thematicObjective",
       "@type": "@id"
+    },
+    "thoroughfare": {
+      "@id": "http://www.w3.org/ns/locn#thoroughfare",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "totalCost": {
       "@id": "https://w3id.org/adm/model/totalCost",
@@ -286,14 +458,42 @@
       "@id": "https://w3id.org/adm/model/turnover",
       "@type": "@id"
     },
+    "turnoverAfterProject": {
+      "@id": "https://w3id.org/adm/model/turnoverAfterProject",
+      "@type": "@id"
+    },
+    "turnoverAsAgreed": {
+      "@id": "https://w3id.org/adm/model/turnoverAsAgreed",
+      "@type": "@id"
+    },
     "type": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/type",
       "@type": "@id"
     },
+    "urbanDevelopment": {
+      "@id": "https://w3id.org/adm/model/urbanDevelopment",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
     "validTenders": {
       "@id": "https://w3id.org/adm/model/validTenders",
       "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "wasteTreatmentCapacity": {
+      "@id": "https://w3id.org/adm/model/wasteTreatmentCapacity",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "wasteWaterTreatmentCompCost": {
+      "@id": "https://w3id.org/adm/model/wasteWaterTreatmentCompCost",
+      "@type": "@id"
+    },
+    "waterSupplyNetworkCompCost": {
+      "@id": "https://w3id.org/adm/model/waterSupplyNetworkCompCost",
+      "@type": "@id"
+    },
+    "waterSupplyPlantCompCost": {
+      "@id": "https://w3id.org/adm/model/waterSupplyPlantCompCost",
+      "@type": "@id"
     }
   }
 }
