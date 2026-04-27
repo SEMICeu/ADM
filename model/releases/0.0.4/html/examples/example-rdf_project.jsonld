@@ -1,0 +1,200 @@
+{
+  "@context": [
+    "https://semiceu.github.io/uri.semic.eu-generated/ADM/releases/0.0.3/context/arachne.jsonld",
+    {
+      "adm": "https://w3id.org/adm/model/",
+      "adms": "http://www.w3.org/ns/adms#",
+      "cv": "http://data.europa.eu/m8g/",
+      "epo": "http://data.europa.eu/a4g/ontology#",
+      "ex": "http://example.com/",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "frapo": "http://purl.org/cerif/frapo/",
+	  "legal": "http://www.w3.org/ns/legal#",
+      "locn": "http://www.w3.org/ns/locn#",
+      "person": "http://www.w3.org/ns/person#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "ex:project1",
+      "@type": "Project",
+      "frapo:hasEndDate": {
+        "@type": "xsd:date",
+        "@value": "2012-06-01"
+      },
+      "frapo:hasStartDate": {
+        "@type": "xsd:date",
+        "@value": "2012-01-01"
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Project name"
+      },
+      "adms:identifier": {
+        "@id": "ex:identifier1"
+      },
+      "adms:status": {
+        "@id": "ex:status1"
+      },
+      "adm:ECFinancialAssistance": {
+        "@id": "_:g0"
+      },
+      "adm:hasBeneficiary": {
+        "@id": "ex:beneficiary1"
+      },
+      "adm:income": {
+        "@id": "_:g2"
+      },
+      "adm:otherContributions": {
+        "@id": "_:g1"
+      },
+      "adm:thematicObjective": {
+        "@id": "https://w3id.org/adm/codelist/thematicObjective/10"
+      },
+      "adm:totalCost": {
+        "@id": "_:g3"
+      },
+      "adm:hasProjectType": {
+        "@id": "ex:esf1"
+      }
+    },
+    {
+      "@id": "ex:esf1",
+      "@type": [
+        "ESF",
+        "ProjectType"
+      ],
+      "adm:dg": {
+        "@id": "http://publications.europa.eu/resource/authority/corporate-body/EMPL"
+      },
+      "adm:projectTypeType": {
+        "@id": "https://w3id.org/adm/codelist/projectType/1"
+      },
+      "adm:peopleToTrain": {
+        "@value": "10",
+        "@type": "xsd:integer"
+      },
+      "adm:trainingHours": {
+        "@value": "160",
+        "@type": "xsd:integer"
+      }
+    },
+    {
+      "@id": "_:g0",
+      "@type": "MonetaryValue",
+      "epo:hasCurrency": {
+        "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
+      },
+      "epo:hasAmountValue": {
+        "@type": "xsd:decimal",
+        "@value": "8733000"
+      }
+    },
+    {
+      "@id": "_:g1",
+      "@type": "MonetaryValue",
+      "epo:hasCurrency": {
+        "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
+      },
+      "epo:hasAmountValue": {
+        "@type": "xsd:decimal",
+        "@value": "4125000"
+      }
+    },
+    {
+      "@id": "_:g2",
+      "@type": "MonetaryValue",
+      "epo:hasCurrency": {
+        "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
+      },
+      "epo:hasAmountValue": {
+        "@type": "xsd:decimal",
+        "@value": "12733.85"
+      }
+    },
+    {
+      "@id": "_:g3",
+      "@type": "MonetaryValue",
+      "epo:hasCurrency": {
+        "@id": "http://publications.europa.eu/resource/authority/currency/EUR"
+      },
+      "epo:hasAmountValue": {
+        "@type": "xsd:decimal",
+        "@value": "12870733.85"
+      }
+    },
+    {
+      "@id": "ex:beneficiary1",
+      "@type": "Beneficiary",
+      "epo:playedBy": {
+        "@id":"ex:entity1"
+      },
+      "adm:hasPartner": {
+        "@id": "ex:partner1"
+      }
+    },
+    {
+      "@id": "ex:entity1",
+      "@type": "LegalEntity",
+      "adms:identifier": {
+        "@id": "ex:identifier2"
+      }
+    },
+    {
+      "@id": "ex:partner1",
+      "@type": "Partner",
+      "epo:playedBy": {
+        "@id":"ex:entity2"
+      }
+    },
+    {
+      "@id": "ex:entity2",
+      "@type": "LegalEntity",
+      "adms:identifier": {
+        "@id": "ex:identifier3"
+      }
+    },
+    {
+      "@id": "ex:identifier1",
+      "@type": "Identifier",
+      "skos:notation": "Project 0124"
+    },
+    {
+      "@id": "ex:identifier2",
+      "@type": "Identifier",
+      "skos:notation": "5800012"
+    },
+    {
+      "@id": "ex:identifier3",
+      "@type": "Identifier",
+      "skos:notation": "1457"
+    },
+    {
+      "@id": "ex:status1",
+      "@type": "Code",
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Open"
+      }
+    },
+    {
+      "@id": "http://publications.europa.eu/resource/authority/currency/EUR",
+      "@type": "Code"
+    },
+    {
+      "@id": "https://w3id.org/adm/codelist/thematicObjective/10",
+      "@type": "Code"
+    },
+    {
+      "@id": "https://w3id.org/adm/codelist/projectType/1",
+      "@type": "Code"
+    },
+    {
+      "@id": "http://publications.europa.eu/resource/authority/corporate-body/EMPL",
+      "@type": "Code"
+    }
+  ]
+}
